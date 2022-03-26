@@ -20,4 +20,4 @@ def logout():
 
 @login_required
 def main():
-    return render_template('mainpage.html')
+    return render_template('index.html')
