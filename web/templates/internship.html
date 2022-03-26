@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block con_title %}
+	{{data}}
+{% endblock %}
+
+{% block info %}
+
+  <div id="container">
+    <h1>&bull; Запись блока стажировки &bull;</h1>
+    <div class="underline">
+    </div>
+    <div class="icon_wrapper">
+    </div>
+    <form action="/main" method="POST" id="contact_form">
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Название" name="name" id="telephone_input" required>
+      </div>
+      <div class="message">
+        <label for="message"></label>
+        <textarea name="title" placeholder="Описание" id="message_input" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Создать" id="form_button" />
+      </div>
+    </form><!-- // End form -->
+  </div><!-- // End #container -->
+{% endblock %}

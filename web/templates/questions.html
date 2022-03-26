@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block con_title %}
+	{{data}}
+{% endblock %}
+
+{% block info %}
+
+  <div id="container">
+    <h1>&bull; Запись литературы для направлений изучения &bull;</h1>
+    <div class="underline">
+    </div>
+    <div class="icon_wrapper">
+    </div>
+    <form action="/questions" method="POST" id="contact_form">
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="Направление" name="name" id="subject_input" required="">
+        <option disabled="" selected="" hidden="">Направление</option>
+        {% for c in captures %}
+          <option>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Вопрос" name="question" id="telephone_input" required>
+      </div>
+      <div class="message">
+        <label for="message"></label>
+        <textarea name="right_answer" placeholder="Правильный ответ" id="message_input" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="message">
+        <label for="message"></label>
+        <textarea name="wrong_answer2" placeholder="Неправильный ответ" id="message_input" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="message">
+        <label for="message"></label>
+        <textarea name="wrong_answer1" placeholder="Неправильный ответ" id="message_input" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Создать" id="form_button" />
+      </div>
+    </form><!-- // End form -->
+  </div><!-- // End #container -->
+{% endblock %}

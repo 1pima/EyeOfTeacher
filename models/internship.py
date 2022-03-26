@@ -7,7 +7,7 @@ class Internship(dbc.Model):
     __table_args__ = {'schema': 'info'}
 
     id = dbc.Column(dbc.BigInteger, primary_key=True, autoincrement=True, unique=True)
-    name = dbc.Column(dbc.String(256))
+    name = dbc.Column(dbc.String(256), unique=True)
     title = dbc.Column(dbc.String(256))
 
     @classmethod
