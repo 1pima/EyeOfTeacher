@@ -5,9 +5,12 @@ name = "pypi"
 
 [packages]
 flask = "*"
-flask-security = "*"
 requests = "*"
 marshmallow = "*"
+flask-sqlalchemy = "*"
+pyotp = "*"
+flask-security-too = "==3.4.5"
+psycopg2-binary = "*"
 
 [dev-packages]
 
