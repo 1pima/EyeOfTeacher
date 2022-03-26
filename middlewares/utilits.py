@@ -16,6 +16,8 @@ def parse_params(schema: ma.Schema = None):
                 return fn(*args, **kwargs)
             elif request.form:
                 data = request.form
+            elif request.is_json:
+                data = request.json
             else:
                 return abort(403)
 
